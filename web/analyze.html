@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial News Analysis</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Financial News Analysis</h1>
+            <p>Analyze financial news articles for sentiment and market impact</p>
+        </header>
+
+        <nav class="main-nav">
+            <a href="/analyze.html" class="nav-link active">News Analysis</a>
+            <a href="/rankings.html" class="nav-link">Stock Rankings</a>
+            <a href="/about.html" class="nav-link">About</a>
+        </nav>
+
+        <div class="analysis-container">
+            <div class="card">
+                <h2>Single News Analysis</h2>
+                <form id="news-form">
+                    <div class="form-group">
+                        <label for="news-title">Title</label>
+                        <input type="text" id="news-title" name="title" required placeholder="Enter news title">
+                    </div>
+                    <div class="form-group">
+                        <label for="news-content">Content</label>
+                        <textarea id="news-content" name="content" rows="6" required placeholder="Enter news content"></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="news-symbol">Stock Symbol (optional)</label>
+                            <input type="text" id="news-symbol" name="symbol" placeholder="e.g., AAPL">
+                        </div>
+                        <div class="form-group">
+                            <label for="news-date">Date (optional)</label>
+                            <input type="date" id="news-date" name="date">
+                        </div>
+                        <div class="form-group">
+                            <label for="news-source">Source (optional)</label>
+                            <input type="text" id="news-source" name="source" placeholder="e.g., Bloomberg">
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn primary">Analyze</button>
+                        <button type="reset" class="btn secondary">Clear</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="card">
+                <h2>Batch Analysis</h2>
+                <div class="batch-info">
+                    <h4>CSV File Format</h4>
+                    <div class="csv-format">
+                        <p>Your CSV file should include these columns:</p>
+                        <ul>
+                            <li><code>title</code> (required) - News article title</li>
+                            <li><code>content</code> (required) - News article content</li>
+                            <li><code>symbol</code> (optional) - Stock symbol</li>
+                            <li><code>date</code> (optional) - Article date (YYYY-MM-DD)</li>
+                            <li><code>source</code> (optional) - News source</li>
+                        </ul>
+                        <a href="#" id="download-template" class="btn secondary">Download Template</a>
+                    </div>
+                </div>
+                <form id="batch-form">
+                    <div class="form-group">
+                        <label for="batch-file">Upload CSV File</label>
+                        <div class="file-upload">
+                            <input type="file" id="batch-file" name="file" accept=".csv">
+                            <div class="file-info hidden">
+                                <span id="file-name">No file selected</span>
+                                <button type="button" id="remove-file" class="btn danger small">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn primary" disabled>Upload & Analyze</button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="analysis-results" class="card hidden">
+                <h2>Analysis Results</h2>
+                <div class="results-container">
+                    <div class="result-item">
+                        <h3>Sentiment</h3>
+                        <div id="sentiment-badge" class="badge">-</div>
+                        <div class="confidence">
+                            <span>Confidence: </span>
+                            <span id="sentiment-confidence">-</span>
+                        </div>
+                    </div>
+                    <div class="result-item">
+                        <h3>Impact</h3>
+                        <div id="impact-badge" class="badge">-</div>
+                        <div class="confidence">
+                            <span>Confidence: </span>
+                            <span id="impact-confidence">-</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="extracted-symbols">
+                    <h3>Extracted Symbols</h3>
+                    <div id="symbols-container">-</div>
+                </div>
+            </div>
+
+            <div id="batch-results" class="card hidden">
+                <div class="card-header">
+                    <h2>Batch Analysis Results</h2>
+                    <div class="batch-actions">
+                        <button id="export-results" class="btn secondary">Export to CSV</button>
+                    </div>
+                </div>
+                <div class="batch-summary">
+                    <div class="summary-item">
+                        <span class="summary-label">Total Articles:</span>
+                        <span id="total-articles" class="summary-value">0</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">Processed:</span>
+                        <span id="processed-articles" class="summary-value">0</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">Success Rate:</span>
+                        <span id="success-rate" class="summary-value">0%</span>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table id="batch-table">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Sentiment</th>
+                                <th>Impact</th>
+                                <th>Symbols</th>
+                                <th>Date</th>
+                                <th>Source</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Batch results will be inserted here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Financial News Analysis | Developed by Qafza</p>
+        </footer>
+    </div>
+
+    <div id="loading-overlay" class="hidden">
+        <div class="spinner"></div>
+        <p id="loading-message">Processing...</p>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+[
+  {
+    "name": "Apple",
+    "symbol": "AAPL"
+  },
+  {
+    "name": "Microsoft",
+    "symbol": "MSFT"
+  },
+  {
+    "name": "Alphabet",
+    "symbol": "GOOGL"
+  },
+  {
+    "name": "Google",
+    "symbol": "GOOGL"
+  },
+  {
+    "name": "Amazon",
+    "symbol": "AMZN"
+  },
+  {
+    "name": "Meta",
+    "symbol": "META"
+  },
+  {
+    "name": "Facebook",
+    "symbol": "META"
+  },
+  {
+    "name": "Tesla",
+    "symbol": "TSLA"
+  },
+  {
+    "name": "NVIDIA",
+    "symbol": "NVDA"
+  },
+  {
+    "name": "Berkshire Hathaway",
+    "symbol": "BRK.A"
+  },
+  {
+    "name": "JPMorgan Chase",
+    "symbol": "JPM"
+  },
+  {
+    "name": "Johnson & Johnson",
+    "symbol": "JNJ"
+  },
+  {
+    "name": "Visa",
+    "symbol": "V"
+  },
+  {
+    "name": "Walmart",
+    "symbol": "WMT"
+  },
+  {
+    "name": "Mastercard",
+    "symbol": "MA"
+  },
+  {
+    "name": "Procter & Gamble",
+    "symbol": "PG"
+  },
+  {
+    "name": "Bank of America",
+    "symbol": "BAC"
+  },
+  {
+    "name": "Home Depot",
+    "symbol": "HD"
+  },
+  {
+    "name": "Exxon Mobil",
+    "symbol": "XOM"
+  },
+  {
+    "name": "Intel",
+    "symbol": "INTC"
+  },
+  {
+    "name": "Verizon",
+    "symbol": "VZ"
+  },
+  {
+    "name": "AT&T",
+    "symbol": "T"
+  },
+  {
+    "name": "Coca-Cola",
+    "symbol": "KO"
+  },
+  {
+    "name": "Pfizer",
+    "symbol": "PFE"
+  },
+  {
+    "name": "Cisco",
+    "symbol": "CSCO"
+  },
+  {
+    "name": "Chevron",
+    "symbol": "CVX"
+  },
+  {
+    "name": "Adobe",
+    "symbol": "ADBE"
+  },
+  {
+    "name": "Netflix",
+    "symbol": "NFLX"
+  },
+  {
+    "name": "PayPal",
+    "symbol": "PYPL"
+  },
+  {
+    "name": "Comcast",
+    "symbol": "CMCSA"
+  },
+  {
+    "name": "Disney",
+    "symbol": "DIS"
+  },
+  {
+    "name": "Salesforce",
+    "symbol": "CRM"
+  },
+  {
+    "name": "IBM",
+    "symbol": "IBM"
+  },
+  {
+    "name": "McDonald's",
+    "symbol": "MCD"
+  },
+  {
+    "name": "Abbott Laboratories",
+    "symbol": "ABT"
+  },
+  {
+    "name": "Oracle",
+    "symbol": "ORCL"
+  },
+  {
+    "name": "Merck",
+    "symbol": "MRK"
+  },
+  {
+    "name": "Accenture",
+    "symbol": "ACN"
+  },
+  {
+    "name": "Costco",
+    "symbol": "COST"
+  },
+  {
+    "name": "Thermo Fisher Scientific",
+    "symbol": "TMO"
+  },
+  {
+    "name": "Broadcom",
+    "symbol": "AVGO"
+  },
+  {
+    "name": "Qualcomm",
+    "symbol": "QCOM"
+  },
+  {
+    "name": "Texas Instruments",
+    "symbol": "TXN"
+  },
+  {
+    "name": "United Parcel Service",
+    "symbol": "UPS"
+  },
+  {
+    "name": "Nike",
+    "symbol": "NKE"
+  },
+  {
+    "name": "Lowe's",
+    "symbol": "LOW"
+  },
+  {
+    "name": "Starbucks",
+    "symbol": "SBUX"
+  },
+  {
+    "name": "AMD",
+    "symbol": "AMD"
+  },
+  {
+    "name": "Advanced Micro Devices",
+    "symbol": "AMD"
+  },
+  {
+    "name": "Goldman Sachs",
+    "symbol": "GS"
+  }
+] 

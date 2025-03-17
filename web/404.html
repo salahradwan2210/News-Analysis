@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <style>
+        .error-container {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        
+        .error-code {
+            font-size: 120px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .error-message {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        
+        .home-link {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .home-link:hover {
+            background-color: var(--primary-dark);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="error-container">
+            <div class="error-code">404</div>
+            <div class="error-message">Page Not Found</div>
+            <p>The page you are looking for does not exist or has been moved.</p>
+            <a href="/" class="home-link">Go to Home</a>
+        </div>
+    </div>
+</body>
+</html> 

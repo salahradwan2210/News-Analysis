@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Rankings - Financial News Analysis</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Financial News Analysis</h1>
+            <p>Stock Rankings Based on News Analysis</p>
+        </header>
+
+        <nav class="main-nav">
+            <a href="/analyze.html" class="nav-link">News Analysis</a>
+            <a href="/rankings.html" class="nav-link active">Stock Rankings</a>
+            <a href="/about.html" class="nav-link">About</a>
+        </nav>
+
+        <div class="card">
+            <div class="card-header">
+                <h2>Stock Rankings</h2>
+                <button id="refresh-rankings" class="btn secondary">Refresh</button>
+            </div>
+            <div class="chart-container">
+                <canvas id="rankings-chart"></canvas>
+            </div>
+            <div class="table-container">
+                <table id="rankings-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Symbol</th>
+                            <th>Score</th>
+                            <th>Sentiment</th>
+                            <th>Impact</th>
+                            <th>News Count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rankings will be inserted here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Stock Details</h2>
+            <div class="form-group">
+                <label for="stock-symbol">Enter Stock Symbol</label>
+                <div class="input-with-button">
+                    <input type="text" id="stock-symbol" placeholder="e.g., AAPL">
+                    <button id="search-stock" class="btn primary">Search</button>
+                </div>
+            </div>
+            <div id="stock-details" class="hidden">
+                <div class="stock-header">
+                    <h3 id="stock-name">-</h3>
+                    <div id="stock-sentiment-badge" class="badge">-</div>
+                </div>
+                <div class="stock-metrics">
+                    <div class="metric">
+                        <span class="metric-label">Ranking Score:</span>
+                        <span id="stock-score" class="metric-value">-</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Impact Score:</span>
+                        <span id="stock-impact" class="metric-value">-</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">News Count:</span>
+                        <span id="stock-news-count" class="metric-value">-</span>
+                    </div>
+                </div>
+                <div class="sentiment-distribution">
+                    <h4>Sentiment Distribution</h4>
+                    <div class="chart-container small">
+                        <canvas id="sentiment-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Financial News Analysis | Developed by Qafza</p>
+        </footer>
+    </div>
+
+    <div id="loading-overlay" class="hidden">
+        <div class="spinner"></div>
+        <p>Processing...</p>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
+

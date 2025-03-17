@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Financial News Analysis</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Financial News Analysis</h1>
+            <p>About Our Analysis Models and Methodology</p>
+        </header>
+
+        <nav class="main-nav">
+            <a href="/analyze.html" class="nav-link">News Analysis</a>
+            <a href="/rankings.html" class="nav-link">Stock Rankings</a>
+            <a href="/about.html" class="nav-link active">About</a>
+        </nav>
+
+        <div class="card">
+            <h2>About Financial News Analysis</h2>
+            <p>This application uses deep learning models to analyze financial news articles and predict their sentiment and potential impact on stock prices.</p>
+            
+            <h3>Features</h3>
+            <ul>
+                <li><strong>Sentiment Analysis:</strong> LSTM model with 90% accuracy</li>
+                <li><strong>Impact Prediction:</strong> GRU model with 85% accuracy</li>
+                <li><strong>Stock Symbol Extraction:</strong> Automatically identify stock symbols</li>
+                <li><strong>Stock Rankings:</strong> Real-time rankings based on news analysis</li>
+            </ul>
+            
+            <h3>Model Information</h3>
+            <div class="model-info">
+                <div class="model-card">
+                    <h4>Sentiment Model</h4>
+                    <div class="model-details">
+                        <div class="model-metric">
+                            <span class="metric-label">Type:</span>
+                            <span class="metric-value">LSTM</span>
+                        </div>
+                        <div class="model-metric">
+                            <span class="metric-label">Accuracy:</span>
+                            <span class="metric-value">90%</span>
+                        </div>
+                        <div class="model-metric">
+                            <span class="metric-label">Features:</span>
+                            <span class="metric-value">Text embeddings, NLP preprocessing</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="model-card">
+                    <h4>Impact Model</h4>
+                    <div class="model-details">
+                        <div class="model-metric">
+                            <span class="metric-label">Type:</span>
+                            <span class="metric-value">GRU</span>
+                        </div>
+                        <div class="model-metric">
+                            <span class="metric-label">Accuracy:</span>
+                            <span class="metric-value">85%</span>
+                        </div>
+                        <div class="model-metric">
+                            <span class="metric-label">Features:</span>
+                            <span class="metric-value">Market indicators, sentiment scores</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Methodology</h3>
+            <div class="methodology">
+                <h4>Data Processing</h4>
+                <p>Our pipeline processes financial news articles through several stages:</p>
+                <ol>
+                    <li>Text preprocessing and cleaning</li>
+                    <li>Named entity recognition for stock symbols</li>
+                    <li>Sentiment analysis using LSTM model</li>
+                    <li>Impact prediction using GRU model</li>
+                    <li>Stock ranking calculation based on aggregated results</li>
+                </ol>
+
+                <h4>Ranking Formula</h4>
+                <p>Stock rankings are calculated using a weighted formula that considers:</p>
+                <ul>
+                    <li>Sentiment scores (60% weight)</li>
+                    <li>Impact predictions (40% weight)</li>
+                    <li>News article frequency</li>
+                    <li>Time decay factor for older news</li>
+                </ul>
+            </div>
+
+            <h3>Technology Stack</h3>
+            <div class="tech-stack">
+                <ul>
+                    <li><strong>Backend:</strong> Python, FastAPI, PyTorch</li>
+                    <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript</li>
+                    <li><strong>Machine Learning:</strong> LSTM, GRU, Transformers</li>
+                    <li><strong>Data Processing:</strong> Pandas, NumPy, NLTK</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Financial News Analysis | Developed by Qafza</p>
+        </footer>
+    </div>
+</body>
+</html> 
