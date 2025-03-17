@@ -1,18 +1,18 @@
-# Financial News Analysis Pipeline | تحليل الأخبار المالية وترتيب الأسهم للاستثمار
+# Financial News Analysis Pipeline 
 
-## Overview | نظرة عامة
+## Overview  
 This project implements a financial news analysis pipeline that processes news articles to predict their sentiment and potential impact on stock prices. It includes both an API server and a web interface for easy interaction.
 
-## Features | المميزات
-- Real-time news analysis | تحليل الأخبار في الوقت الفعلي
-- Sentiment prediction | تحليل المشاعر للأخبار المالية
-- Impact assessment | تقييم تأثير الأخبار على الأسهم
-- Stock symbol extraction | استخراج رموز الأسهم
-- Stock rankings based on news analysis | ترتيب الأسهم بناءً على تحليل الأخبار
-- Interactive web interface | واجهة مستخدم تفاعلية
-- RESTful API | واجهة برمجة تطبيقات
+## Features 
+- Real-time news analysis
+- Sentiment prediction
+- Impact assessment
+- Stock symbol extraction 
+- Stock rankings based on news analysis 
+- Interactive web interface 
+- RESTful API
 
-## Project Structure | هيكل المشروع
+## Project Structure 
 ```
 .
 ├── app.py              # Main application file (API + Web UI)
@@ -34,46 +34,47 @@ This project implements a financial news analysis pipeline that processes news a
     └── templates/    # HTML templates
 ```
 
-## Setup | التثبيت
-1. Clone the repository | نسخ المشروع
-2. Create a virtual environment | إنشاء بيئة افتراضية:
+## Setup 
+1. Clone the repository 
+2. Create a virtual environment:
    ```bash
    python -m venv venv
    source venv/bin/activate  # Linux/Mac
    venv\Scripts\activate     # Windows
    ```
-3. Install dependencies | تثبيت المتطلبات:
+4. Install dependencies :
    ```bash
    pip install -r requirements.txt
    ```
 
-## Usage | الاستخدام
-1. Start the application | تشغيل التطبيق:
+## Usage
+1. Start the application :
    ```bash
    python pipeline.py
    ```
    This will start both the API server and web interface.
 
-2. Access the web interface | الوصول إلى واجهة المستخدم:
+2. Access the web interface :
    - Open http://localhost:8003 in your browser
 
-3. API Documentation | توثيق واجهة برمجة التطبيقات:
+3. API Documentation :
    - Swagger UI: http://localhost:8002/docs
    - ReDoc: http://localhost:8002/redoc
 
-## API Endpoints | نقاط النهاية للواجهة البرمجية
-- `POST /analyze`: Analyze a single news article | تحليل خبر واحد
-- `POST /batch-analyze`: Analyze multiple news articles | تحليل مجموعة من الأخبار
-- `GET /rankings`: Get stock rankings | الحصول على ترتيب الأسهم
-- `GET /rankings/{symbol}`: Get ranking for a specific stock | الحصول على ترتيب سهم محدد
+## API Endpoints 
+- `POST /analyze`: Analyze a single news article 
+- `POST /batch-analyze`: Analyze multiple news articles 
+- `GET /rankings`: Get stock rankings 
+- `GET /rankings/{symbol}`: Get ranking for a specific stock 
 
-## Web Interface | واجهة المستخدم
-The web interface provides | توفر واجهة المستخدم:
-- News analysis form | نموذج تحليل الأخبار
-- Batch analysis upload | تحميل مجموعة من الأخبار للتحليل
-- Stock rankings visualization | عرض مرئي لترتيب الأسهم
-- Stock details view | عرض تفاصيل الأسهم
-- Real-time updates via WebSocket | تحديثات فورية
+## Web Interface 
+The web interface provides :
+- News analysis form
+- 
+- Batch analysis upload 
+- Stock rankings visualization 
+- Stock details view 
+- Real-time updates via WebSocket 
 
 ## Development | التطوير
 1. Run tests | تشغيل الاختبارات:
