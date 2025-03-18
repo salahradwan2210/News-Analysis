@@ -16,13 +16,13 @@ This project implements a financial news analysis pipeline that processes news a
 Here are some screenshots of the application interface:
 
 ### News Analysis Page
-![News Analysis Interface](web/static/1.png)
+![News Analysis Interface](web/static/3.png)
 
 ### Stock Rankings
 ![Stock Rankings](web/static/2.png)
 
 ### About Page
-![About Page](web/static/3.png)
+![About Page](web/static/screencapture-localhost-8003-2025-03-18-21_48_35.png)
 
 ## Project Structure
 ```
